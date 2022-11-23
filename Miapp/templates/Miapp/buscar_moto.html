@@ -1,0 +1,19 @@
+<form action =''method='GET'>
+
+    <input type='text' name='marca' id='marca'>
+
+    <input type='submit' value='Buscar'>
+
+</form>
+
+{% if motos %}
+
+    <ul>
+    {% for moto in motos%}
+        <li> Moto {{moto.marca}} Modelo: {{moto.modelo}} Año: {{moto.fabricacion}} Kilometraje: {{moto.kilometraje}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p> No hay datos o vehiculo no registrado. </p>
+{% endif %}

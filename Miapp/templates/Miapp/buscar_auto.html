@@ -1,0 +1,22 @@
+<form action =''method='GET'>
+
+    <input type='text' name='marca' id='marca'>
+
+    <input type='submit' value='Buscar'>
+
+</form>
+
+{% if autos %}
+
+    <ul>
+    {% for auto in autos%}
+        <li> Auto {{auto.marca}} Modelo: {{auto.modelo}} Año: {{auto.fabricacion}} Kilometraje: {{auto.kilometraje}}</li>
+    {% endfor %}
+    </ul>
+
+  
+{% endif %}
+
+
+
+
